@@ -5,24 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Theme color and icons-->
+    <meta name="theme-color" content="#CA1F29"/>
+    <link rel="icon" sizes="192x192" href="{{ asset('images/favicons/apple-touch-icon.png') }}"/>
+    <link rel="apple-touch-icon" href="{{ asset('images/favicons/apple-touch-icon.png') }}"/>
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>
+        @hasSection('title')
+        @yield('title') &raquo; {{ config('app.name') }}
+        @else
+            {{ config('app.name') }}
+        @endif
+    </title>
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @include('layouts._header')
+<div id="app">
+    @include('layouts._header')
 
-        @yield('content')
+    @yield('content')
 
-        @include('flash::message')
-    </div>
+    @include('flash::message')
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

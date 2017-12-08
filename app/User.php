@@ -26,6 +26,16 @@ class User extends Authenticatable
     ];
 
     /**
+     * A user has many objectives.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function objectives()
+    {
+        return $this->hasMany(Objective::class);
+    }
+
+    /**
      * Automatically hash the password if one is being set.
      *
      * This allows us to blindly throw passwords into this model and provides a centralized

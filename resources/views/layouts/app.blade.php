@@ -26,9 +26,16 @@
 </head>
 <body>
 <div id="app">
-    @include('layouts._header')
+    {{--@include('layouts._header')--}}
 
-    @yield('content')
+    <main class="d-flex flex-column justify-content-center text-center">
+
+        <p><img src="{{ asset('images/branding.png') }}" /></p>
+
+        <div class="container">
+            @yield('content')
+        </div>
+    </main>
 
     @include('flash::message')
 </div>

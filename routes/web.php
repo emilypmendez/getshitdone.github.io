@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', 'DashboardController')->name('dashboard');
-
 Auth::routes();
+
+Route::view('/', 'home.index')->middleware('guest')->name('home');
+Route::view('/dashboard', 'dashboard.index')->middleware('auth')->name('dashboard');

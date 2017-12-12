@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="mb-5">Welcome to GSD Club.</h1>
-
-    <p><a href="{{ route('login') }}" class="btn btn-lg btn-block btn-danger">Login</a></p>
-    <p><a href="{{ route('register') }}" class="btn btn-lg btn-block btn-danger">New Account</a></p>
+    <p><a href="#" class="btn btn-lg btn-block btn-danger">Add to the List</a></p>
+    <p><a href="#" class="btn btn-lg btn-block btn-danger">View Agenda</a></p>
+    <p><a href="#" class="btn btn-lg btn-block btn-danger disabled">Profile</a></p>
+    <p><a href="#" class="btn btn-lg btn-block btn-danger disabled">Support</a></p>
 @endsection

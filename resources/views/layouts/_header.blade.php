@@ -5,8 +5,7 @@
                 <i class="fa fa-bars"></i>
             </template>
 
-            <b-dropdown-item href="{{ url('/') }}">Home</b-dropdown-item>
-            <b-dropdown-item href="#" disabled>Dashboard</b-dropdown-item>
+            <b-dropdown-item href="{{ route('dashboard') }}">Home</b-dropdown-item>
             <b-dropdown-item href="#" disabled>Profile</b-dropdown-item>
 
             <b-dropdown-divider></b-dropdown-divider>

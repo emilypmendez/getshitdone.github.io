@@ -26,7 +26,7 @@
 </head>
 <body>
 <div id="app">
-    {{--@include('layouts._header')--}}
+    @include('layouts._header')
 
     <main class="d-flex flex-column justify-content-center text-center">
 

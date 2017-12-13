@@ -9,6 +9,8 @@ window.toastr = require("toastr");
 window.swal = require('sweetalert2');
 
 // Pusher installation
+window.Pusher = require('pusher-js');
+import Echo from "laravel-echo";
 
 /*
  * toastr settings
@@ -26,9 +28,10 @@ window.axios.defaults.headers.common["X-CSRF-TOKEN"] = document.head.querySelect
 /*
  * pusher settings
  */
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: document.head.querySelector("meta[name=\"pusher-key\"]").content,
-//     cluster: 'us2',
-//     encrypted: true
-// });
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: document.head.querySelector("meta[name=\"pusher-key\"]").content,
+    cluster: 'us2',
+    namespace: 'GetShitDone.Events',
+    encrypted: true
+});

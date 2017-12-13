@@ -13,6 +13,12 @@ class CreateController extends Controller
      */
     public function __invoke()
     {
-        return view('objectives.create');
+        $objectives = auth()->user()->objectives()
+            ->withoutPriority()
+            ->withoutSchedule()
+            ->latest()
+            ->get();
+
+        return view('objectives.create', compact('objectives'));
     }
 }

@@ -173,7 +173,7 @@ return [
          */
         GetShitDone\Providers\AppServiceProvider::class,
         GetShitDone\Providers\AuthServiceProvider::class,
-        // GetShitDone\Providers\BroadcastServiceProvider::class,
+         GetShitDone\Providers\BroadcastServiceProvider::class,
         GetShitDone\Providers\EventServiceProvider::class,
         GetShitDone\Providers\RouteServiceProvider::class,
 

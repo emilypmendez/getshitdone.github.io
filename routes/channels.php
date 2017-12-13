@@ -11,6 +11,6 @@
 |
 */
 
-Broadcast::channel('App.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+Broadcast::channel('users.{user}', function (\GetShitDone\User $user, \GetShitDone\User $target) {
+    return $target->id === $user->id;
 });

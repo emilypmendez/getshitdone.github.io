@@ -21,6 +21,7 @@ class CreateObjectivesTable extends Migration
             $table->tinyInteger('priority')->unsigned()->index()->nullable();
             $table->boolean('is_complete')->index()->default(false);
             $table->date('due_at')->index()->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

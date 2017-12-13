@@ -2,6 +2,7 @@
 
 namespace GetShitDone;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -48,5 +49,21 @@ class User extends Authenticatable
         if ($value !== null) {
             $this->attributes['password'] = bcrypt($value);
         }
+    }
+
+    /**
+     * Returns true if the user owns the given models.
+     *
+     * @param Model[] ...$models
+     * @return bool
+     */
+    public function owns(Model ...$models)
+    {
+        foreach ($models as $model) {
+            if ($model->user_id !== $this->id)
+                return false;
+        }
+
+        return true;
     }
 }

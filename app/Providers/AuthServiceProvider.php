@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'GetShitDone\Model' => 'GetShitDone\Policies\ModelPolicy',
+        \GetShitDone\Objective::class => \GetShitDone\Policies\ObjectivePolicy::class,
     ];
 
     /**

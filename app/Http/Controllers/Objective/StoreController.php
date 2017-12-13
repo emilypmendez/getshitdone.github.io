@@ -7,6 +7,12 @@ use GetShitDone\Http\Controllers\Controller;
 
 class StoreController extends Controller
 {
+    /**
+     * Create a new objective for the authenticated user.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function __invoke(Request $request)
     {
         $input = $request->validate([

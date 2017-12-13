@@ -13,6 +13,11 @@ class ScheduleController extends Controller
      */
     public function __invoke()
     {
-        return view('objectives.schedule.create');
+        $objectives = auth()->user()->objectives()
+            ->withoutSchedule()
+            ->latest()
+            ->get();
+
+        return view('objectives.schedule.create', compact('objectives'));
     }
 }

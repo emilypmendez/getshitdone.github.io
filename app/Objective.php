@@ -2,15 +2,15 @@
 
 namespace GetShitDone;
 
-use GetShitDone\Events\ObjectiveCreated;
-use GetShitDone\Events\ObjectiveDeleted;
-use GetShitDone\Events\ObjectiveUpdated;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 
 class Objective extends Model
 {
+    use SoftDeletes;
+
     /**
      * The attributes that should be cast to native types.
      *

@@ -2,13 +2,23 @@
 
 namespace GetShitDone\Http\Controllers\Objective;
 
-use Illuminate\Http\Request;
 use GetShitDone\Http\Controllers\Controller;
+use GetShitDone\Objective;
 
 class RemoveController extends Controller
 {
-    public function __invoke()
+    /**
+     * Update the priority of a given objective.
+     *
+     * @param Objective $objective
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke(Objective $objective)
     {
-        //
+        $this->authorize('delete', $objective);
+
+        $objective->delete();
+
+        return response([], 204);
     }
 }

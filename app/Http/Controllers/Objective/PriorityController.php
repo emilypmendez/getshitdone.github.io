@@ -13,6 +13,13 @@ class PriorityController extends Controller
      */
     public function __invoke()
     {
-        return view('objectives.priority.create');
+        $objectives = auth()->user()->objectives()
+            ->withoutSchedule()
+            ->orderByRaw('!ISNULL(`priority`)')
+            ->orderBy('priority', 'desc')
+            ->latest()
+            ->get();
+
+        return view('objectives.priority.create', compact('objectives'));
     }
 }

@@ -89,4 +89,19 @@ class Objective extends Model
     {
         return $query->whereNull('due_at');
     }
+
+    /**
+     * Returns objectives with a due date on a given week.
+     *
+     * @param Builder $query
+     * @param Carbon $week
+     * @return Builder
+     */
+    public function scopeDueOnWeek(Builder $query, Carbon $week)
+    {
+        return $query
+            ->whereNotNull('due_at')
+            ->where('due_at', '>=', $week->copy()->startOfWeek())
+            ->where('due_at', '<=', $week->copy()->endOfWeek());
+    }
 }

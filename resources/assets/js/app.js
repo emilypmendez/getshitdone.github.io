@@ -8,6 +8,7 @@ Vue.use(BootstrapVue);
 
 // Load global components
 Vue.component('create-objective-form', require('./components/forms/CreateObjectiveForm.vue'));
+Vue.component('list-objectives', require('./components/ListObjectives.vue'));
 Vue.component('login-form', require('./components/forms/LoginForm.vue'));
 Vue.component('post-request-link', require('./components/PostRequestLink.vue'));
 Vue.component('register-form', require('./components/forms/RegisterForm.vue'));

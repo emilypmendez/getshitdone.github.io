@@ -30,6 +30,9 @@
                 </div>
             </li>
         </ul>
+        <p v-else>
+            Your dump has been sorted nicely.  You may carry on.
+        </p>
     </div>
 </template>
 

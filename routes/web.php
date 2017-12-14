@@ -33,6 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
     // Manipulating objectives
     Route::patch('/objectives/{objective}/priority', 'Objective\UpdatePriorityController')->name('objectives.priority.update');
     Route::patch('/objectives/{objective}/schedule', 'Objective\UpdateScheduleController')->name('objectives.schedule.update');
+    Route::patch('/objectives/{objective}/complete', 'Objective\MarkCompleteController')->name('objectives.complete.update');
+    Route::patch('/objectives/{objective}/incomplete', 'Objective\MarkIncompleteController')->name('objectives.incomplete.update');
 
     // Deleting objectives
     Route::delete('/objectives/{objective}', 'Objective\RemoveController')->name('objectives.prioritize.update');

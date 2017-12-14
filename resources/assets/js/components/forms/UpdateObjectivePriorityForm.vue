@@ -100,7 +100,7 @@
              */
             deleteObjective(objective) {
                 window.axios.delete(`/objectives/${objective.id}`).then(() => {
-                    toastr.success('Your objective\'s priority has been deleted successfully.');
+                    toastr.success('Your objective has been deleted successfully.');
                 });
             },
         },

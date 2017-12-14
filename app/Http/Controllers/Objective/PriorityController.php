@@ -14,7 +14,6 @@ class PriorityController extends Controller
     public function __invoke()
     {
         $objectives = auth()->user()->objectives()
-            ->withoutSchedule()
             ->orderByRaw('!ISNULL(`priority`)')
             ->orderBy('priority', 'desc')
             ->latest()

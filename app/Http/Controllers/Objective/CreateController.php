@@ -14,8 +14,6 @@ class CreateController extends Controller
     public function __invoke()
     {
         $objectives = auth()->user()->objectives()
-            ->withoutPriority()
-            ->withoutSchedule()
             ->latest()
             ->get();
 

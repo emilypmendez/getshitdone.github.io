@@ -7,6 +7,8 @@
                     v-model="form.data.due_at"
                     :state="form.errors.state('due_at')"
                     @input="onSubmit"
+                    :min="min"
+                    :max="max"
                     required>
             </b-form-input>
 
@@ -16,6 +18,7 @@
 </template>
 
 <script>
+    import moment from "moment";
     import Form from "../../utilities/Form";
 
     export default {
@@ -32,12 +35,26 @@
             },
         },
 
+        computed: {
+            min() {
+                return moment().local().format('Y-MM-DD');
+            },
+
+            max() {
+                return moment().local().add(2, 'weeks').format('Y-MM-DD');
+            },
+        },
+
         data() {
             return {
                 form: new Form({
                     due_at: '',
                 }),
             };
+        },
+
+        mounted() {
+            window.moment = moment; // DEBUG ONLY
         },
 
         methods: {

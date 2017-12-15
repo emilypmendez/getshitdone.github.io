@@ -2,37 +2,37 @@
     <div>
         <b-card class="mb-3" no-body>
             <b-tabs pills card vertical>
-                <b-tab title="Monday" active>
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Monday" active>
                     <div class="list-group list-group-flush" v-if="mondayObjectives.length">
                         <listed-objective v-for="objective in mondayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Tuesday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Tuesday">
                     <div class="list-group list-group-flush" v-if="tuesdayObjectives.length">
                         <listed-objective v-for="objective in tuesdayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Wednesday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Wednesday">
                     <div class="list-group list-group-flush" v-if="wednesdayObjectives.length">
                         <listed-objective v-for="objective in wednesdayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Thursday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Thursday">
                     <div class="list-group list-group-flush" v-if="thursdayObjectives.length">
                         <listed-objective v-for="objective in thursdayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Friday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Friday">
                     <div class="list-group list-group-flush" v-if="fridayObjectives.length">
                         <listed-objective v-for="objective in fridayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Saturday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Saturday">
                     <div class="list-group list-group-flush" v-if="saturdayObjectives.length">
                         <listed-objective v-for="objective in saturdayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
                 </b-tab>
-                <b-tab title="Sunday">
+                <b-tab style="max-height: 60vh; overflow-y: auto" title="Sunday">
                     <div class="list-group list-group-flush" v-if="sundayObjectives.length">
                         <listed-objective v-for="objective in sundayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>

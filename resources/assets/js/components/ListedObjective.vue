@@ -1,9 +1,15 @@
 <template>
     <div class="list-group-item d-flex align-items-center">
         <div class="mr-auto">
-            <div>
+            <div v-if="objective.is_complete">
+                <del class="text-success">
+                    <span>#{{ objective.priority }}</span>
+                    <span>{{ objective.body }}</span>
+                </del>
+            </div>
+            <div v-else>
                 <span class="text-muted">#{{ objective.priority }}</span>
-                {{ objective.body }}
+                <span>{{ objective.body }}</span>
             </div>
         </div>
         <div v-if="objective.is_complete">

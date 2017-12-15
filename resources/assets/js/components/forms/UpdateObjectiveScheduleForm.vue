@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" style="max-height: 60vh; overflow-y: auto">
         <b-tabs card>
             <b-tab title="1" active no-body>
                 <ul class="list-group list-group-flush text-left" v-if="level1Objectives.length">

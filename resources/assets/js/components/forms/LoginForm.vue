@@ -18,7 +18,7 @@
             </b-form-checkbox>
         </b-form-group>
 
-        <b-button type="submit" variant="danger" :disabled="this.form.isSubmitting">
+        <b-button type="submit" variant="danger" class="btn-block btn-lg" :disabled="this.form.isSubmitting">
             Crack On
         </b-button>
     </b-form>

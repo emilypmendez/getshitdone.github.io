@@ -1,1 +1,16 @@
-$container-max-widths: (sm: 540px, md: 720px, lg: 720px, xl: 720px)
+@import "../../../../node_modules/bootstrap/scss/bootstrap"
+
+// Structure
+$container-max-widths: (sm: 420px, md: 520px, lg: 620px, xl: 720px)
+
+// Colors
+$red: #ca2121
+$gray-100: #f7f6f6
+
+$danger: $red
+
+$theme-colors: (primary: $blue, secondary: $gray-600, success: $green, info: $purple, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800)
+
+// Links
+$link-color: theme-color("danger")
+$link-hover-color: darken($link-color, 15%)

@@ -15,7 +15,7 @@ class PriorityController extends Controller
     {
         $objectives = auth()->user()->objectives()
             ->orderByRaw('!ISNULL(`priority`)')
-            ->orderBy('priority', 'desc')
+            ->orderBy('priority', 'asc')
             ->latest()
             ->get();
 

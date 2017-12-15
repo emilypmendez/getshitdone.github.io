@@ -20,7 +20,7 @@ class UpdateScheduleController extends Controller
         $this->authorize('update', $objective);
 
         $input = $request->validate([
-            'due_at' => 'required|date|after:now',
+            'due_at' => 'required|date',
         ]);
 
         $objective->update($input);

@@ -16,7 +16,7 @@
             </b-form-group>
         </b-form>
 
-        <ul class="list-group text-left" v-if="objectives.length">
+        <ul class="list-group text-left" v-if="objectives.length" style="max-height: 60vh; overflow-y: auto">
             <li class="list-group-item" v-for="objective in objectives" :key="objective.id" v-text="objective.body"></li>
         </ul>
     </div>

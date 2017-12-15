@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <ul class="list-group text-left" v-if="objectives.length">
-            <li class="list-group-item d-flex align-items-center" v-for="objective in objectives" :key="objective.id">
+    <div style="max-height: 60vh; overflow-y: auto">
+        <div class="list-group text-left" v-if="objectives.length">
+            <div class="list-group-item d-flex align-items-center" v-for="objective in objectives" :key="objective.id">
                 <div class="mr-auto">
                     <p>{{ objective.body }}</p>
 
@@ -28,8 +28,8 @@
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
         <p v-else>
             Your dump has been sorted nicely.  You may carry on.
         </p>

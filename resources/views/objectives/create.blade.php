@@ -3,6 +3,8 @@
 @section('content')
     <h1 class="mb-3">Brain Dump</h1>
 
+    <pro-tip message="Take a dump here. We’ll organize your objectives on the next screen."></pro-tip>
+
     <div class="row align-items-center mb-3">
         <div class="col-2 text-left">
             <a href="{{ route('dashboard') }}">

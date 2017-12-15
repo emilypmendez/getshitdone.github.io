@@ -3,6 +3,8 @@
 @section('content')
     <h1>Agenda</h1>
 
+    <pro-tip message="Get your shit done this week so we can do more shit. Toilets are fantastic."></pro-tip>
+
     <div class="row align-items-center mb-3">
         <div class="col-2 text-left">
             <a href="{{ route('objectives.index', ['offset' => $offset - 1]) }}">

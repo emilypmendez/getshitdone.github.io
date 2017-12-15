@@ -7,9 +7,11 @@
 
     <div class="row align-items-center mb-3">
         <div class="col-2 text-left">
-            <a href="{{ route('objectives.index', ['offset' => $offset - 1]) }}">
-                <i class="fa fa-2x fa-chevron-circle-left"></i>
-            </a>
+            @if ($offset >= -3)
+                <a href="{{ route('objectives.index', ['offset' => $offset - 1]) }}">
+                    <i class="fa fa-2x fa-chevron-circle-left"></i>
+                </a>
+            @endif
         </div>
 
         <div class="col-8">
@@ -17,9 +19,11 @@
         </div>
 
         <div class="col-2 text-right">
-            <a href="{{ route('objectives.index', ['offset' => $offset + 1]) }}">
-                <i class="fa fa-2x fa-chevron-circle-right"></i>
-            </a>
+            @if ($offset <= 1)
+                <a href="{{ route('objectives.index', ['offset' => $offset + 1]) }}">
+                    <i class="fa fa-2x fa-chevron-circle-right"></i>
+                </a>
+            @endif
         </div>
     </div>
 

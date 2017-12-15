@@ -16,7 +16,7 @@ class ListController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $input = $request->validate(['offset' => 'nullable|integer',]);
+        $input = $request->validate(['offset' => 'nullable|integer|max:2|min:-4',]);
         $offset = $input['offset'] ?? 0;
         $week = Carbon::now()->addWeeks($offset);
 

@@ -1,7 +1,7 @@
 <template>
     <div class="card" style="max-height: 60vh; overflow-y: auto">
         <b-tabs card>
-            <b-tab title="1" active no-body>
+            <b-tab :title="`<b>A</b> (${level1Objectives.length})`" active no-body>
                 <ul class="list-group list-group-flush text-left" v-if="level1Objectives.length">
                     <li class="list-group-item d-flex align-items-center" v-for="objective in level1Objectives" :key="objective.id">
                         <div class="mr-auto">
@@ -22,7 +22,7 @@
                     </p>
                 </div>
             </b-tab>
-            <b-tab title="2" no-body>
+            <b-tab :title="`<b>B</b> (${level2Objectives.length})`" no-body>
                 <ul class="list-group list-group-flush text-left" v-if="level2Objectives.length">
                     <li class="list-group-item d-flex align-items-center" v-for="objective in level2Objectives" :key="objective.id">
                         <div class="mr-auto">
@@ -43,7 +43,7 @@
                     </p>
                 </div>
             </b-tab>
-            <b-tab title="3" no-body>
+            <b-tab :title="`<b>C</b> (${level3Objectives.length})`" no-body>
                 <ul class="list-group list-group-flush text-left" v-if="level3Objectives.length">
                     <li class="list-group-item d-flex align-items-center" v-for="objective in level3Objectives" :key="objective.id">
                         <div class="mr-auto">

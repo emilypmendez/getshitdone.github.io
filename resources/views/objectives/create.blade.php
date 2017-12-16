@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('protip')
-    <pro-tip message="Take a dump here. We’ll organize your objectives on the next screen."></pro-tip>
+    <pro-tip
+            title="Take a dump here."
+            message="We’ll sort on the next screen.">
+    </pro-tip>
 @endsection
 
 @section('content')

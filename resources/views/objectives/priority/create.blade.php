@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('protip')
-    <pro-tip message="Assign priorities so that we can get shit done. Here’s the gist:<br /><br />
-
-One means only you can do it, it earns you $$ monies, and it has a due date within the next 2 weeks.<br /><br />
-Two means someone will be following up with you, or - alternatively - someone needs to be contacted or delegated to.<br /><br />
-Three means it must be done sometime in the near future."></pro-tip>
+    <pro-tip
+            title="Assign Priorities"
+            message="Let’s get shit done.<br /><br />
+Here’s the gist:<br /><br />
+* A = only You can do it, it earns You $$ monies, and must be done within the next 2 weeks.<br /><br />
+* B = someone must follow up with you, or - alternatively - someone needs to be contacted or delegated to relatively soon.<br /><br />
+* C = must be done sometime in the near future."></pro-tip>
 @endsection
 
 @section('content')

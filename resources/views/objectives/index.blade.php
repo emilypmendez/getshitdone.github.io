@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('protip')
-    <pro-tip message="Get your shit done this week so we can do more shit. Toilets are fantastic."></pro-tip>
+    <pro-tip
+            title="Toilets are fantastic."
+            message="Get your shit done so we can do more shit.">
+    </pro-tip>
 @endsection
 
 @section('content')

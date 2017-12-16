@@ -11,16 +11,21 @@
                 type: String,
                 required: true,
             },
+
+            title: {
+                type: String,
+                default: "Pro-tip",
+            },
         },
 
         methods: {
             launchTip() {
                 swal({
-                    title: "Pro-tip",
+                    title: this.title,
                     html: this.message,
                     type: "question",
-                    confirmButtonText: "Got'cha",
-                    confirmButtonClass: "btn btn-danger",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "#ca2121",
                 });
             },
         },

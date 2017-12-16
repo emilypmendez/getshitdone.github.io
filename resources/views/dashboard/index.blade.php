@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('protip')
+    <pro-tip
+            title="Instructions"
+            message="Trust the process.">
+    </pro-tip>
+@endsection
+
 @section('content')
     <h1 class="mb-3">Dashboard</h1>
 

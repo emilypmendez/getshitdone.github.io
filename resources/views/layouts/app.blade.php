@@ -7,8 +7,7 @@
 
     <!-- Theme color and icons-->
     <meta name="theme-color" content="#CA1F29"/>
-    <link rel="icon" sizes="192x192" href="{{ asset('images/favicons/apple-touch-icon.png') }}"/>
-    <link rel="apple-touch-icon" href="{{ asset('images/favicons/apple-touch-icon.png') }}"/>
+    <link rel="icon" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -38,9 +37,14 @@
             <img src="{{ asset('images/branding.png') }}" />
         </div>
 
-        <div class="container">
+        <div class="container mb-3">
             @yield('content')
         </div>
+
+        <footer class="text-muted">
+            <p>All rights reserved. &copy; Coffee With Dan.</p>
+            <p><a href="https://twitter.com/beastofbusiness" target="_blank">@beastofbusiness</a></p>
+        </footer>
     </main>
 
     @include('flash::message')

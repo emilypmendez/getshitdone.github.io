@@ -1,5 +1,5 @@
 @auth
-    <div style="position: fixed" class="m-3">
+    <div style="position: absolute; top: 1rem; left: 1rem">
         <b-dropdown size="lg" variant="outline-secondary" no-caret v-cloak>
             <template slot="button-content">
                 <i class="fa fa-bars"></i>

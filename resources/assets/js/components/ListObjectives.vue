@@ -2,7 +2,7 @@
     <div>
         <b-card class="mb-3" no-body>
             <b-tabs pills card vertical>
-                <b-tab style="max-height: 60vh; overflow-y: auto" title="Monday" active>
+                <b-tab style="max-height: 50vh; overflow-y: auto" title="Monday" active>
                     <div class="list-group list-group-flush" v-if="mondayObjectives.length">
                         <listed-objective v-for="objective in mondayObjectives" :key="objective.id" :objective="objective"></listed-objective>
                     </div>
@@ -40,9 +40,13 @@
             </b-tabs>
         </b-card>
 
-        <p><a href="#" class="btn btn-lg btn-block btn-danger disabled">Mark List as Complete</a></p>
-        <p><a href="/objectives/priority" class="btn btn-lg btn-block btn-danger">Return to Prioritizing</a></p>
-        <p><a href="/objectives/create" class="btn btn-lg btn-block btn-danger">Add More Items</a></p>
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center">
+                <p><a href="#" class="btn btn-lg btn-block btn-danger disabled">Mark List as Complete</a></p>
+                <p><a href="/objectives/priority" class="btn btn-lg btn-block btn-danger">Return to Prioritizing</a></p>
+                <p><a href="/objectives/create" class="btn btn-lg btn-block btn-danger">Add More Items</a></p>
+            </div>
+        </div>
     </div>
 </template>
 

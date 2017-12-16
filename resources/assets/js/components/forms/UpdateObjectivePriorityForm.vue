@@ -6,17 +6,17 @@
                     <p>{{ objective.body }}</p>
 
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn px-5"
+                        <button type="button" class="btn px-4 px-sm-5"
                                 :class="[{ 'btn-danger': objective.priority == 1 }, { 'btn-secondary': objective.priority != 1 }]"
                                 @click.prevent="changePriority(objective, 1)">
                             1
                         </button>
-                        <button type="button" class="btn px-5"
+                        <button type="button" class="btn px-4 px-sm-5"
                                 :class="[{ 'btn-danger': objective.priority == 2 }, { 'btn-secondary': objective.priority != 2 }]"
                                 @click.prevent="changePriority(objective, 2)">
                             2
                         </button>
-                        <button type="button" class="btn px-5"
+                        <button type="button" class="btn px-4 px-sm-5"
                                 :class="[{ 'btn-danger': objective.priority == 3 }, { 'btn-secondary': objective.priority != 3 }]"
                                 @click.prevent="changePriority(objective, 3)">
                             3

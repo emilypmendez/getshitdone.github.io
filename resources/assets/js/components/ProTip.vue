@@ -1,6 +1,6 @@
 <template>
-    <a href="#" style="position: fixed; top: 3rem; right: 3rem" @click.prevent="launchTip">
-        <i class="fa fa-5x fa-question-circle"></i>
+    <a href="#" style="position: absolute; top: 1rem; right: 1rem" @click.prevent="launchTip">
+        <i class="fa fa-3x fa-question-circle"></i>
     </a>
 </template>
 

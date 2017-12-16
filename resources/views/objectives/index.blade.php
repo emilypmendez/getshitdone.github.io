@@ -1,15 +1,17 @@
 @extends('layouts.app')
 
+@section('protip')
+    <pro-tip message="Get your shit done this week so we can do more shit. Toilets are fantastic."></pro-tip>
+@endsection
+
 @section('content')
     <h1>Agenda</h1>
-
-    <pro-tip message="Get your shit done this week so we can do more shit. Toilets are fantastic."></pro-tip>
 
     <div class="row align-items-center mb-3">
         <div class="col-2 text-left">
             @if ($offset >= -3)
                 <a href="{{ route('objectives.index', ['offset' => $offset - 1]) }}">
-                    <i class="fa fa-2x fa-chevron-circle-left"></i>
+                    <i class="fa fa-3x fa-chevron-circle-left"></i>
                 </a>
             @endif
         </div>
@@ -21,7 +23,7 @@
         <div class="col-2 text-right">
             @if ($offset <= 1)
                 <a href="{{ route('objectives.index', ['offset' => $offset + 1]) }}">
-                    <i class="fa fa-2x fa-chevron-circle-right"></i>
+                    <i class="fa fa-3x fa-chevron-circle-right"></i>
                 </a>
             @endif
         </div>

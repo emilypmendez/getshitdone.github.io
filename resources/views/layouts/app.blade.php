@@ -27,11 +27,16 @@
 </head>
 <body>
 <div id="app">
-    @include('layouts._header')
-
     <main class="d-flex flex-column justify-content-center text-center">
+        <div style="position: relative">
+            <div class="container" style="position: relative">
+                @include('layouts._header')
 
-        <p><img src="{{ asset('images/branding.png') }}" /></p>
+                @yield('protip')
+            </div>
+
+            <img src="{{ asset('images/branding.png') }}" />
+        </div>
 
         <div class="container">
             @yield('content')

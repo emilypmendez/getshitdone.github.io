@@ -9,8 +9,16 @@ $gray-100: #f7f6f6
 
 $danger: $red
 
+$component-active-bg: theme-color("danger")
+
 $theme-colors: (primary: $blue, secondary: $gray-600, success: $green, info: $purple, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800)
 
 // Links
 $link-color: theme-color("danger")
 $link-hover-color: darken($link-color, 15%)
+
+// Nav pills
+$nav-pills-link-active-bg: $component-active-bg
+
+// Drop downs
+$dropdown-link-active-bg: $component-active-bg

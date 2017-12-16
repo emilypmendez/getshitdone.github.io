@@ -1,8 +1,11 @@
 @auth
     <div style="position: absolute; top: 1rem; left: 1rem">
-        <b-dropdown size="lg" variant="outline-secondary" no-caret v-cloak>
-            <template slot="button-content">
-                <i class="fa fa-bars"></i>
+        <b-dropdown variant="link" no-caret v-cloak>
+            <template slot="button-content" class="p-0">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                </span>
             </template>
 
             <b-dropdown-item href="{{ route('dashboard') }}">Home</b-dropdown-item>

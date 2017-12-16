@@ -1,5 +1,5 @@
 <template>
-    <a href="#" style="position: absolute; top: 1rem; right: 1rem" @click.prevent="launchTip">
+    <a href="#" style="position: absolute; top: 1rem; right: 1rem; margin: 6px 12px" @click.prevent="launchTip">
         <i class="fa fa-3x fa-question-circle"></i>
     </a>
 </template>

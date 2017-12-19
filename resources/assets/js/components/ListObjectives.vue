@@ -1,7 +1,10 @@
 <template>
     <div>
         <b-card class="mb-3" no-body>
-            <b-tabs pills card vertical>
+            <div class="card-header">
+                {{ getCurrentDate }}
+            </div>
+            <b-tabs pills card vertical v-model="objectiveDayTabIndex">
                 <b-tab style="max-height: 50vh; overflow-y: auto" :title="`Monday (${mondayObjectives.length})`" active>
                     <div class="list-group list-group-flush" v-if="mondayObjectives.length">
                         <listed-objective v-for="objective in mondayObjectives" :key="objective.id" :objective="objective"></listed-objective>
@@ -42,7 +45,6 @@
 
         <div class="row">
             <div class="col-sm-8 offset-sm-2 text-center">
-                <p><a href="#" class="btn btn-lg btn-block btn-danger disabled">Mark List as Complete</a></p>
                 <p><a href="/objectives/priority" class="btn btn-lg btn-block btn-danger">Return to Prioritizing</a></p>
                 <p><a href="/objectives/create" class="btn btn-lg btn-block btn-danger">Add More Items</a></p>
             </div>
@@ -94,11 +96,15 @@
             sundayObjectives() {
                 return this.objectives.filter(objective => moment(objective.due_at).weekday() == 6);
             },
+            getCurrentDate() {
+                return moment().startOf("week").add(this.objectiveDayTabIndex, "days").format('MM/DD/Y');
+            },
         },
 
         data() {
             return {
                 objectives: [],
+                objectiveDayTabIndex: 0,
             };
         },
 
@@ -115,7 +121,9 @@
 
                     let index = this.objectives.findIndex(objective => objective.id == e.objective.id);
 
-                    if (index > 0)
+                    if (!e.objective.due_at || !e.objective.priority)
+                        this.objectives.splice(index, 1);
+                    else if (index >= 0)
                         this.$set(this.objectives, index, e.objective);
                 })
                 .listen("ObjectiveDeleted", (e) => {
@@ -123,7 +131,7 @@
 
                     let index = this.objectives.findIndex(objective => objective.id == e.objective.id);
 
-                    if (index > 0)
+                    if (index >= 0)
                         this.objectives.splice(index, 1);
                 });
         },

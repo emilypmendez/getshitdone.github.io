@@ -3,6 +3,7 @@
 namespace GetShitDone\Http\Controllers\Objective;
 
 use GetShitDone\Objective;
+use GetShitDone\Rules\PriorityLimitRule;
 use Illuminate\Http\Request;
 use GetShitDone\Http\Controllers\Controller;
 
@@ -20,7 +21,7 @@ class UpdateScheduleController extends Controller
         $this->authorize('update', $objective);
 
         $input = $request->validate([
-            'due_at' => 'required|date',
+            'due_at' => ['required', 'date', new PriorityLimitRule($objective)],
         ]);
 
         $objective->update($input);

@@ -3,7 +3,8 @@
 @section('protip')
     <pro-tip
             title="Take a dump here."
-            message="We’ll sort on the next screen.">
+            message="Dump all the things you need to do for the week. <br />
+            We'll begin sorting on the next screen.">
     </pro-tip>
 @endsection
 

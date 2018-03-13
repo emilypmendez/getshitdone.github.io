@@ -3,7 +3,9 @@
 @section('protip')
     <pro-tip
             title="Toilets are fantastic."
-            message="Get your shit done so we can do more shit.">
+            message="Get your shit done so we can do more shit.<br /><br />
+            Select the top left menu to return to main dashboard when finished.<br /><br />
+            Toodle pip!">
     </pro-tip>
 @endsection
 

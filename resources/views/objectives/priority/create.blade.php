@@ -7,12 +7,12 @@
 
 <b>You are only going to give a shit about the 'A's.</b> <br /><br />
 
-* A = <b>Takes you closer to your big goal(s).</b>
-Only you can do it. It's business critical, time bound/urgent, potentially 'life-changing' - in other words, important shit that actually matters! Must be done within 2-3 weeks.
+* A = <b>Takes you closer to your big goal(s).</b> <br />
+Only you can do it. It's business critical, time bound/urgent, potentially 'life-changing' - in other words, important shit that actually matters! Must be done within 2-3 weeks. <br /><br />
 
-* B = <b>Still important, but could perhaps be handled by someone else</b>, follow up with you, or - alternatively - someone needs to be contacted or delegated to relatively soon.
+* B = <b>Still important, but could perhaps be handled by someone else</b>, follow up with you, or - alternatively - someone needs to be contacted or delegated to relatively soon. <br /><br />
 
-* C = <b>Not urgent</b> or time bound, would like to be done 'sometime' but if it doesn't happen isn't the end of the world."></pro-tip>
+* C = <b>Not urgent</b> or time bound, would like to be done 'sometime' but if it doesn't happen isn't the end of the world.<br />"></pro-tip>
 @endsection
 
 @section('content')

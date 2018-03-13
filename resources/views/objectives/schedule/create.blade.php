@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('protip')
-    <pro-tip title="Set your agenda." message="Fill in the dates. We will adjust accordingly."></pro-tip>
+    <pro-tip title="Set your agenda."
+    message="Fill in the dates. <br />
+    Select the right arrow to move on."></pro-tip>
 @endsection
 
 @section('content')

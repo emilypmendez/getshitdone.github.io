@@ -21,9 +21,15 @@
                     <div class="invalid-feedback" v-text="form.errors.get('password_confirmation')"></div>
                 </b-form-group>
 
-                <b-button type="submit" variant="danger" class="btn-lg btn-block" :disabled="this.form.isSubmitting">
+                <b-button type="submit" variant="danger" class="btn-lg btn-block mb-2" :disabled="this.form.isSubmitting">
                     Create Account
                 </b-button>
+
+                <a href="/login">
+                    <b-button type="button" variant="link" class="btn-lg btn-block">
+                        Sign in here
+                    </b-button>
+                </a>
             </div>
         </div>
     </b-form>
